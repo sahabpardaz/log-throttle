@@ -402,6 +402,9 @@ public class LogThrottleTest {
         }
     }
 
+    /**
+     * A simulated clock which its time can be mocked according to test requirements.
+     */
     class SimulatedClock extends Clock {
         private AtomicLong millis = new AtomicLong(0);
 
