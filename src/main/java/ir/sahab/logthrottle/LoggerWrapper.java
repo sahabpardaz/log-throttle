@@ -523,19 +523,19 @@ class LoggerWrapper implements Logger {
             this.frequencyMessage = frequencyMessage;
         }
 
-        public static Status doNotReport() {
+        static Status doNotReport() {
             return DO_NOT_REPORT;
         }
 
-        public static Status report(String reportAppendix) {
+        static Status report(String reportAppendix) {
             return new Status(true, reportAppendix);
         }
 
-        public boolean shouldReport() {
+        boolean shouldReport() {
             return shouldReport;
         }
 
-        public String getFrequencyMessage() {
+        String getFrequencyMessage() {
             return frequencyMessage;
         }
     }
