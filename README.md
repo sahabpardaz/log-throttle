@@ -1,5 +1,5 @@
 # Log Throttle
-It is a throttle to avoid log bursts. It is compatible with slf4j loggers.
+It is a throttle to avoid log bursts. You have your ordinary slf4j loggers but call them via throttle in potential burst scenarios.
 
 In situations such as network failure or when a third party system is down, we may have a burst of logs produced by multiple worker threads. The failure can last for a while causing millions of log records which totally pollutes the log files. Sometimes we may implement Circuit Breaker pattern to settle it, but the initial burst for already triggered operations is still there.
 Actually the bad effect is not limited to polluting log files. We have also encountered a bug in log4j which sometimes causes livelock in sharp bursts.
